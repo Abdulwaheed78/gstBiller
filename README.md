@@ -35,7 +35,8 @@ php artisan key:generate
 Run Migrations and Seed Database:
 
 Run the migrations to create database tables and seed the default admin user.
-php artisan migrate --seed
+php artisan migrate
+php artisan db:seed --class=UserSeeder
 
 Default Admin Credentials:
 Use the following credentials to log in as the admin:
@@ -45,6 +46,9 @@ Password: admin@12
 Setup File Permissions:
 Ensure the necessary permissions for Laravel storage and cache:
 chmod -R 775 storage bootstrap/cache
+
+make sure to link stprage first bu using below command 
+php artisan storage:link
 
 Run the Application:
 Start the Laravel development server:
